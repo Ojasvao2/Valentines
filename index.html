@@ -384,7 +384,7 @@ filter: drop-shadow(0 0 15px rgba(255,215,0,0.8));
         .btn-yes {
             background: linear-gradient(135deg, #ff6b6b 0%, #ff1493 50%, #ff69b4 100%);
             color: white;
-            box-shadow: 
+            box-shadow:
                 0 8px 25px rgba(255,105,180,0.4),
                 0 0 0 0 rgba(255,105,180,0.7);
             animation: yes-pulse 2s ease-in-out infinite;
@@ -394,12 +394,12 @@ filter: drop-shadow(0 0 15px rgba(255,215,0,0.8));
 
         @keyframes yes-pulse {
             0%, 100% {
-                box-shadow: 
+                box-shadow:
                     0 8px 25px rgba(255,105,180,0.4),
                     0 0 0 0 rgba(255,105,180,0.7);
             }
             50% {
-                box-shadow: 
+                box-shadow:
                     0 8px 25px rgba(255,105,180,0.4),
                     0 0 0 15px rgba(255,105,180,0);
             }
@@ -407,7 +407,7 @@ filter: drop-shadow(0 0 15px rgba(255,215,0,0.8));
 
         .btn-yes:hover {
             transform: scale(1.1);
-            box-shadow: 
+            box-shadow:
                 0 12px 35px rgba(255,105,180,0.6),
                 0 0 50px rgba(255,105,180,0.4);
         }
@@ -456,7 +456,7 @@ filter: drop-shadow(0 0 15px rgba(255,215,0,0.8));
             opacity: 0;
             transition: opacity 0.3s ease;
             z-index: 1000;
-            box-shadow: 
+            box-shadow:
                 0 10px 40px rgba(168,85,247,0.5),
                 0 0 20px rgba(255,105,180,0.3);
             border: 2px solid rgba(255,255,255,0.3);
@@ -544,78 +544,83 @@ filter: drop-shadow(0 0 15px rgba(255,215,0,0.8));
 <body>
     <!-- Floating Items Background -->
     <div class="hearts-container" id="heartsContainer"></div>
-
     <!-- Small Decorative Elements -->
     <div class="decoration deco-1">🌸</div>
     <div class="decoration deco-2">🌺</div>
     <div class="decoration deco-3">🌷</div>
     <div class="decoration deco-4">🌹</div>
-
     <!-- Giant Teddy Bear Wrapper -->
     <div class="teddy-wrapper">
-        
+       
         <!-- Floating Hearts Above Teddy -->
         <div class="teddy-hearts">
             <span class="teddy-love">💕</span>
             <span class="teddy-love">💖</span>
             <span class="teddy-love">💗</span>
         </div>
-
         <!-- Teddy Head (on top) -->
         <div class="teddy-head">🧸</div>
-
         <!-- Teddy Body Section -->
         <div class="teddy-body">
-            
+           
             <!-- Blurred Teddy Torso Behind Card -->
             <div class="teddy-torso">🧸</div>
-            
+           
             <!-- Left Paw -->
             <div class="teddy-paw-left">🐾</div>
-
             <!-- Main Card (on teddy's torso) -->
             <div class="card" id="mainCard">
                 <div class="big-heart">💖</div>
-                
-                <h1 class="title">Hey <span class="name-highlight">KUCCHUU</span>! ✨</h1>
+               
+                <h1 class="title">Hey <span class="name-highlight">Samooo</span>! ✨</h1>
                 <p class="subtitle">I have something very special to ask you...</p>
-                
+               
                 <h2 class="question">
-                    <span class="name-in-question">Samooo</span>, Will You Be My Valentine? 💕
+                    <span class="name-in-question">Jannuu</span>, Will You Be My Valentine foever and ever till death do us apart? 💕
                 </h2>
-                
+               
                 <div class="buttons-container" id="buttonsContainer">
                     <button class="btn btn-yes" id="yesBtn" onclick="sayYes()">Yes! 💖</button>
                     <button class="btn btn-no" id="noBtn" onmouseover="runAway()" onclick="runAway()">No</button>
                 </div>
-
                 <div class="love-note">
                     <p>Every love story is beautiful, but <span>ours is my favorite</span> 💕</p>
                 </div>
             </div>
-
             <!-- Right Paw -->
             <div class="teddy-paw-right">🐾</div>
         </div>
-
         <!-- Teddy Feet (at bottom) -->
         <div class="teddy-feet">
             <div class="teddy-foot teddy-foot-left">🐾</div>
             <div class="teddy-foot teddy-foot-right">🐾</div>
         </div>
     </div>
-
     <!-- Hover Message -->
     <div class="hover-message" id="hoverMessage">
         Nope! That's not an option! 😜💕
     </div>
+
+    <!-- DOORON DOORON SONG - STARTS AUTOMATICALLY -->
+    <iframe 
+      id="dooronMusic"
+      width="0" 
+      height="0" 
+      src="https://www.youtube.com/embed/LV_wiOhO40Q?autoplay=1&loop=1&playlist=LV_wiOhO40Q&mute=0&controls=0&modestbranding=1&showinfo=0&rel=0&enablejsapi=1" 
+      frameborder="0" 
+      allow="autoplay; encrypted-media" 
+      allowfullscreen>
+    </iframe>
+
+    <!-- Music Toggle Button -->
+    <button id="musicToggle" style="position: fixed; bottom: 20px; right: 20px; width: 55px; height: 55px; border-radius: 50%; background: linear-gradient(135deg, #ff69b4, #a855f7); color: white; border: none; font-size: 24px; cursor: pointer; z-index: 9999; box-shadow: 0 5px 15px rgba(255,105,180,0.5);">🎵</button>
 
     <script>
         // Create floating items
         function createFloatingItems() {
             const container = document.getElementById('heartsContainer');
             const items = ['💕', '💖', '💗', '💓', '💝', '💘', '❤️', '🌸', '🌺', '✨', '💫', '🦋'];
-            
+           
             for (let i = 0; i < 25; i++) {
                 const item = document.createElement('div');
                 item.className = 'floating-item';
@@ -627,11 +632,10 @@ filter: drop-shadow(0 0 15px rgba(255,215,0,0.8));
                 container.appendChild(item);
             }
         }
-
         // Create twinkling particles
         function createParticles() {
             const container = document.getElementById('heartsContainer');
-            
+           
             for (let i = 0; i < 40; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
@@ -642,108 +646,103 @@ filter: drop-shadow(0 0 15px rgba(255,215,0,0.8));
                 container.appendChild(particle);
             }
         }
-
         // No button logic
         let runAwayCount = 0;
         let messageTimeout = null;
-
         const funnyMessages = [
-            "Haha! Nice try, samooo! 😜💕",
-            "Nope! That button wont accept this answer! 😏",
+            "Haha! Nice try, Samoo! 😜💕",
+            "Nope! That button will not accept your answer! 😏",
             "The No button says: 'I don't think so!' 💖",
-            "hawwww, just say Yes already na! 😘",
+            "Aww, just say Yes already! 😘",
             "That button is playing hard to get! 🙈",
-            "You can't catch it,baby! 😄",
+            "You can't catch it, jaanuu! 😄",
             "It's running away from you! 💕",
-            "The No button has left the chat! 😝",
+            "The No button has left! 😝",
             "Wrong button! ➡️ Yes is waiting!",
-            "Samooo, resistance is futileee hahaha! 💘",
+            "Hawwww itniii zidddd! 💘",
             "That button is too shy! 🙊",
             "Keep trying... or just click Yes! 😉",
             "🧸 The teddy wants you to say Yes!",
             "The teddy is judging you! 🧸😂",
-            "Make the teddy happy,my love! 🧸💖"
+            "Make the teddy happy, ! samoooo"
         ];
-
         function runAway() {
             const noBtn = document.getElementById('noBtn');
             const yesBtn = document.getElementById('yesBtn');
             const hoverMessage = document.getElementById('hoverMessage');
-            
+           
             // Get Yes button position as anchor point
             const yesBtnRect = yesBtn.getBoundingClientRect();
             const yesCenterX = yesBtnRect.left + yesBtnRect.width / 2;
             const yesCenterY = yesBtnRect.top + yesBtnRect.height / 2;
-            
+           
             // Strict radius around Yes button (100-180px)
             const minRadius = 100;
             const maxRadius = 180;
-            
+           
             // Random angle
             const angle = Math.random() * Math.PI * 2;
-            
+           
             // Random distance within radius
             const distance = minRadius + Math.random() * (maxRadius - minRadius);
-            
+           
             // Calculate new position
             let newX = yesCenterX + Math.cos(angle) * distance;
             let newY = yesCenterY + Math.sin(angle) * distance;
-            
+           
             // Get button dimensions
             const noBtnRect = noBtn.getBoundingClientRect();
             const btnWidth = noBtnRect.width;
             const btnHeight = noBtnRect.height;
-            
+           
             // Keep within viewport with padding
             const padding = 15;
             newX = Math.max(padding, Math.min(newX - btnWidth/2, window.innerWidth - btnWidth - padding));
             newY = Math.max(padding, Math.min(newY - btnHeight/2, window.innerHeight - btnHeight - padding));
-            
+           
             // Apply position
             noBtn.style.position = 'fixed';
             noBtn.style.left = newX + 'px';
             noBtn.style.top = newY + 'px';
             noBtn.style.transform = `rotate(${Math.random() * 16 - 8}deg)`;
             noBtn.style.zIndex = '999';
-            
+           
             runAwayCount++;
-            
+           
             // Clear existing timeout
             if (messageTimeout) {
                 clearTimeout(messageTimeout);
             }
-            
+           
             // Show message
             hoverMessage.textContent = funnyMessages[runAwayCount % funnyMessages.length];
             hoverMessage.classList.add('show');
-            
+           
             // Keep message visible for 4 seconds
             messageTimeout = setTimeout(() => {
                 hoverMessage.classList.remove('show');
             }, 4000);
-            
+           
             // Make Yes button more attractive
             const scale = Math.min(1.25, 1 + runAwayCount * 0.025);
             yesBtn.style.transform = `scale(${scale})`;
-            
+           
             if (runAwayCount > 3) {
                 yesBtn.style.boxShadow = `
                     0 10px 30px rgba(255,105,180,0.6),
                     0 0 ${15 + runAwayCount * 4}px rgba(255,105,180,0.5)
                 `;
             }
-
             // Shrink No button after many attempts
             if (runAwayCount > 5) {
                 const fontSize = Math.max(0.85, 1 - runAwayCount * 0.02);
                 noBtn.style.fontSize = fontSize + 'rem';
             }
-            
+           
             // Fade No button
             if (runAwayCount > 10) {
                 noBtn.style.opacity = Math.max(0.4, 1 - (runAwayCount - 10) * 0.1);
             }
-
             // Change text
             if (runAwayCount === 15) {
                 noBtn.textContent = "Fine! 😅";
@@ -752,25 +751,23 @@ filter: drop-shadow(0 0 15px rgba(255,215,0,0.8));
                 noBtn.textContent = "Ok ok! 🏳️";
             }
         }
-
         function sayYes() {
             createHeartBurst();
-            
+           
             document.body.style.transition = 'all 0.5s ease';
             document.body.style.background = 'radial-gradient(circle, #a855f7 0%, #0f0c29 100%)';
-            
+           
             setTimeout(() => {
                 window.location.href = 'celebration.html';
             }, 800);
         }
-
         function createHeartBurst() {
             const items = ['💕', '💖', '💗', '💓', '💝', '💘', '❤️', '🧸', '✨'];
             const yesBtn = document.getElementById('yesBtn');
             const rect = yesBtn.getBoundingClientRect();
             const centerX = rect.left + rect.width / 2;
             const centerY = rect.top + rect.height / 2;
-            
+           
             for (let i = 0; i < 40; i++) {
                 const item = document.createElement('div');
                 item.innerHTML = items[Math.floor(Math.random() * items.length)];
@@ -782,270 +779,48 @@ filter: drop-shadow(0 0 15px rgba(255,215,0,0.8));
                 item.style.zIndex = '1000';
                 item.style.transition = 'all 0.7s ease-out';
                 document.body.appendChild(item);
-                
+               
                 setTimeout(() => {
                     const angle = (Math.PI * 2 * i) / 40;
                     const distance = 80 + Math.random() * 150;
                     item.style.transform = `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) scale(0)`;
                     item.style.opacity = '0';
                 }, 10);
-                
+               
                 setTimeout(() => item.remove(), 800);
             }
         }
-
         // Initialize
         createFloatingItems();
         createParticles();
-
         // Console message
         console.log('%c💕 A special surprise for Samooo! 💕', 'font-size: 20px; color: #ff69b4;');
         console.log('%c🧸 The teddy is rooting for you!', 'font-size: 14px; color: #a855f7;');
-    </script>   
-    <!-- Background Music -->
-    <!-- Dooron Dooron Background (invisible, autoplay, loop) -->
-<iframe 
-  width="0" height="0" 
-  src="Dooron Dooron (Official Video) - Paresh Pahuja Feat. Harleen Sethi  Shiv  Meghdeep  Vaibhav.mp3" 
-  frameborder="0" 
-  allow="autoplay; encrypted-media" 
-  allowfullscreen>
-</iframe>
 
-    <!-- Music Control Button -->
-    <button id="musicToggle" class="music-btn">🎵</button>
+        // ========== DOORON DOORON TOGGLE ==========
+        const musicFrame = document.getElementById('dooronMusic');
+        const toggleBtn = document.getElementById('musicToggle');
+        let isPlaying = true;
 
-    <style>
-        .music-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #ff69b4, #a855f7);
-            color: white;
-            border: 2px solid rgba(255,255,255,0.3);
-            cursor: pointer;
-            font-size: 22px;
-            z-index: 9999;
-            box-shadow: 0 5px 25px rgba(255,105,180,0.5);
-            transition: all 0.3s ease;
-            animation: pulse-music 2s ease-in-out infinite;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .music-btn:hover {
-            transform: scale(1.15);
-            box-shadow: 0 8px 35px rgba(255,105,180,0.7);
-        }
-
-        .music-btn.playing {
-            animation: none;
-            background: linear-gradient(135deg, #a855f7, #667eea);
-        }
-
-        .music-btn.playing::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 2px solid rgba(255,105,180,0.5);
-            animation: music-wave 1.5s ease-out infinite;
-        }
-
-        @keyframes pulse-music {
-            0%, 100% { 
-                box-shadow: 0 5px 25px rgba(255,105,180,0.5);
-            }
-            50% { 
-                box-shadow: 0 5px 25px rgba(255,105,180,0.8), 
-                            0 0 0 12px rgba(255,105,180,0.15);
-            }
-        }
-
-        @keyframes music-wave {
-            0% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(1.8);
-                opacity: 0;
-            }
-        }
-
-        /* Music visualizer bars when playing */
-        .music-btn.playing .music-bars {
-            display: flex;
-        }
-
-        .music-bars {
-            display: none;
-            gap: 2px;
-            height: 20px;
-            align-items: flex-end;
-        }
-
-        .music-bar {
-            width: 3px;
-            background: white;
-            border-radius: 2px;
-            animation: bar-dance 0.5s ease-in-out infinite;
-        }
-
-        .music-bar:nth-child(1) { height: 8px; animation-delay: 0s; }
-        .music-bar:nth-child(2) { height: 16px; animation-delay: 0.1s; }
-        .music-bar:nth-child(3) { height: 12px; animation-delay: 0.2s; }
-        .music-bar:nth-child(4) { height: 18px; animation-delay: 0.3s; }
-
-        @keyframes bar-dance {
-            0%, 100% { transform: scaleY(1); }
-            50% { transform: scaleY(0.5); }
-        }
-    </style>
-
-    <script>
-        // ========== MUSIC CONTROLLER ==========
-        const music = document.getElementById('bgMusic');
-        const musicBtn = document.getElementById('musicToggle');
-        let isMusicPlaying = false;
-        let hasMusicInteracted = false;
-
-        // Music settings
-        music.volume = 0.4;
-        const startTime = 11; // Start from 10 seconds
-
-        // Create visualizer bars
-        const barsContainer = document.createElement('div');
-        barsContainer.className = 'music-bars';
-        for (let i = 0; i < 4; i++) {
-            const bar = document.createElement('div');
-            bar.className = 'music-bar';
-            barsContainer.appendChild(bar);
-        }
-        musicBtn.innerHTML = '';
-        musicBtn.appendChild(document.createTextNode('🎵'));
-
-        // Function to start music
-        function startMusic() {
-            music.currentTime = startTime;
-            music.play().then(() => {
-                isMusicPlaying = true;
-                hasMusicInteracted = true;
-                updateMusicButton();
-            }).catch(err => {
-                console.log('Music play failed:', err);
-            });
-        }
-
-        // Function to update button appearance
-        function updateMusicButton() {
-            if (isMusicPlaying) {
-                musicBtn.innerHTML = '';
-                musicBtn.appendChild(barsContainer.cloneNode(true));
-                musicBtn.classList.add('playing');
-            } else {
-                musicBtn.innerHTML = '🎵';
-                musicBtn.classList.remove('playing');
-            }
-        }
-
-        // Toggle music function
-        function toggleMusic(e) {
-            e.stopPropagation();
-            
-            if (!hasMusicInteracted) {
-                startMusic();
-                return;
-            }
-
-            if (isMusicPlaying) {
-                music.pause();
-                isMusicPlaying = false;
-            } else {
-                music.currentTime = startTime;
-                music.play();
-                isMusicPlaying = true;
-            }
-            updateMusicButton();
-        }
-
-        // Button click handler
-        musicBtn.addEventListener('click', toggleMusic);
-
-        // All possible interaction events for autoplay
-        const interactionEvents = [
-            'click',
-            'touchstart',
-            'mousemove',
-            'scroll',
-            'keydown'
-        ];
-
-        // Handler for first interaction
-        function onFirstInteraction(e) {
-            if (hasMusicInteracted) return;
-            if (e.target.id === 'musicToggle') return; // Let button handle itself
-            
-            startMusic();
-            removeInteractionListeners();
-        }
-
-        // Add interaction listeners
-        function addInteractionListeners() {
-            interactionEvents.forEach(event => {
-                document.addEventListener(event, onFirstInteraction, { passive: true });
-            });
-        }
-
-        // Remove interaction listeners
-        function removeInteractionListeners() {
-            interactionEvents.forEach(event => {
-                document.removeEventListener(event, onFirstInteraction);
-            });
-        }
-
-        // Try autoplay first
-        music.currentTime = startTime;
-        music.play().then(() => {
-            isMusicPlaying = true;
-            hasMusicInteracted = true;
-            updateMusicButton();
-            removeInteractionListeners();
-        }).catch(() => {
-            // Autoplay blocked - add listeners for first interaction
-            console.log('🎵 Waiting for interaction to play music...');
-            addInteractionListeners();
+        toggleBtn.addEventListener('click', () => {
+          if (isPlaying) {
+            musicFrame.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            toggleBtn.textContent = '▶️';
+          } else {
+            musicFrame.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            toggleBtn.textContent = '🎵';
+          }
+          isPlaying = !isPlaying;
         });
 
-        // Handle page visibility (pause when tab hidden)
-        document.addEventListener('visibilitychange', () => {
-            if (!hasMusicInteracted) return;
-            
-            if (document.hidden && isMusicPlaying) {
-                music.pause();
-            } else if (!document.hidden && isMusicPlaying) {
-                music.play();
-            }
-        });
-
-        // When song loops, restart from 9 seconds
-        music.addEventListener('ended', () => {
-            music.currentTime = startTime;
-            music.play();
-        });
-
-        // Double-check loop reset (in case 'ended' doesn't fire with loop)
-        music.addEventListener('timeupdate', () => {
-            // If near the end, go back to start time
-            if (music.duration - music.currentTime < 0.5) {
-                music.currentTime = startTime;
-            }
-        });
+        // Glow effect on button
+        setInterval(() => {
+          if (isPlaying) {
+            toggleBtn.style.boxShadow = '0 0 20px #ff69b4, 0 0 40px #ff1493';
+          } else {
+            toggleBtn.style.boxShadow = '0 5px 15px rgba(255,105,180,0.5)';
+          }
+        }, 1000);
     </script>
 </body>
-</html>
+</html> 
